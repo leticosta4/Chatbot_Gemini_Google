@@ -1,0 +1,33 @@
+# Mac/OSX
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+chat-venv/
+
+# pyenv
+.python-version 
+
+# Packaging
+.Python
+lib/
+lib64/
+parts/
+sdist/
+var/
+
+# Python cache
+*.pyc
+__pycache__/
+
+# Configurations
+config.py

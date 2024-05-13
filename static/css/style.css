@@ -1,0 +1,136 @@
+/* modificar ainda e escolher minhas cores */
+:root { 
+    --purple: #987ba3;
+    --lilac: #bfa1e6;
+    --darkGray: #5f5c5c;
+    --lightGray: #686363;
+    --difWhite: #f3f0d3;
+    --difBlack: #000000;
+    --green: rgb(58, 145, 48);
+  }
+
+body {
+    background-color: var(--bg);
+    color: var(--fontColor);
+    margin: 0; 
+    padding: 60px; 
+}
+  
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--navBgColor);
+    color: var(--btnFontColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px 20px;
+    margin:auto;
+}
+
+.navbar img {
+  width: 40px; 
+  height: auto; 
+  margin-right: 10px; 
+}
+
+#navbar-title{
+    text-decoration: none;
+    color: var(--btnFontColor);
+    font-family: fantasy;
+    font-size:24px;
+    display: flex; 
+    align-items: center;
+}
+
+.navbar-lista{
+    color:var(--btnFontColor);
+    text-align: right;
+    list-style-type: none; 
+    margin: 0;
+    margin-right: 10px; 
+    padding: 1px;
+    display: flex;   
+}
+
+.navbar-lista li {
+    margin-right: 20px; 
+    display: flex; 
+    align-items: center; 
+}
+
+.navbar-lista li a {
+  text-decoration: none;
+  color: var(--btnFontColor);
+  font-family: fantasy;
+  font-size: larger;
+}
+
+#themeBtn{
+  background-color: var(--btnBg);
+  color: var(--btnFontColor);
+  right: 153px;
+  font-family: fantasy;
+  font-size: large;
+  border: none;
+  padding: 7px 13px; 
+  border-radius: 25px; 
+  margin-right: 20px;
+}
+
+.form {
+  overflow:scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: static;
+  width: 800px;
+  padding: 100px 55px; 
+  padding-bottom: 300px;
+  height: 1000px;
+  background-color: rgb(51, 37, 90);
+  border-radius: 10px;
+  margin: 45px auto; 
+}
+
+footer{
+  position: fixed; 
+  bottom: 0; 
+  left: 0;
+  width: 100%; 
+  padding: 20px; 
+  text-align: center; 
+  font-size: small;
+  background-color: var(--footerBgColor);
+  color: var(--btnColor);
+}
+
+footer a{
+  color: var(--btnColor);
+}
+
+.fa-brands{
+  font-size: 27px;
+}
+
+.dark-theme {
+  --bg: var(--difBlack);
+  --fontColor: var(--difWhite);
+  --navBgColor: var(--lilac);
+  --btnBg: var(--difWhite);
+  --btnFontColor: var(--difBlack);
+  --footerBgColor: var(--lightGray);
+}
+
+.light-theme {
+    --bg: var(--difWhite);
+    --fontColor: var(--difBlack);  
+    --navBgColor: var(--purple);
+    --btnBg: var(--difBlack);
+    --btnFontColor: var(--difWhite);
+    --footerBgColor: var(--darkGray);
+}
+  

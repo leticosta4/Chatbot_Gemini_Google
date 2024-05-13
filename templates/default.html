@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    {%block extra_styles%}
+    {%endblock%}
+    <link rel="icon" href="{{url_for('static', filename='img/favicon.svg')}}">
+    <title>Let Chatbot</title>
+</head>
+
+<body class="dark-theme">
+    <header>
+        <nav class="navbar">
+            <a id="navbar-title" href="{{url_for('index')}}" >
+                <img src="{{url_for('static', filename='img/favicon.svg')}}" alt="favicon do site">
+                Let Chatbot 
+            </a>
+            <ul class="navbar-lista">
+                <li> <a href="{{url_for('sobre')}}">Sobre</a> </li>
+                <button id="themeBtn" class="btn" type="submit">Mudar tema</button>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {%block form_content%}
+        {%endblock%}
+        <footer>
+            &copy; By Letícia Almeida 2024
+            &middot;
+            <a href="https://www.linkedin.com/in/let%C3%ADcia-almeida-9704162a0/" target="_blank"><i class="fa-brands fa-github"></i></a>
+            &middot;
+            <a href="https://github.com/leticosta4" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            &middot;
+            <a href="#">Código fonte</a>
+        </footer>
+    </main>
+      <script src="static/actions.js"></script>
+      <noscript>You need to enable JavaScript to view the full website</noscript>
+</body>
+</html>

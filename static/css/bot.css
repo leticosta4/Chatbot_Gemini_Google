@@ -1,0 +1,55 @@
+@import url('style.css');
+
+  .form-img {
+    align-self: center; 
+    margin-bottom: 20px; 
+    position: static;
+  }
+  
+  .form-input {
+    border-radius: 25px;
+    width: 540px;
+    height: 35px;
+    margin-top: 12px;
+    text-indent: 10px;
+  }
+  
+  .form-input-btn{
+    position: relative;
+    background: none;
+    border: none;
+    width: 35px;
+    height: 35px;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+
+  .fa-solid, .fa-circle-arrow-up{
+    font-size: 2.35rem;
+    margin-top: -1px;
+    padding: 5%;
+    color: #bfa1e6;
+  }
+  
+
+  .form-input-btn i:hover{
+    color: var(--green);
+  }
+
+  .form-input-btn i:active{
+    color: red;
+  }
+    
+  .form-resposta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: static;
+    width: 645px;
+    padding: 100px 55px; 
+    height: 10000px;
+    background-color: rgb(76, 56, 133);
+    border-radius: 10px;
+    margin: 60px auto; 
+  }

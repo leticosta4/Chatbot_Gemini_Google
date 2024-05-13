@@ -1,0 +1,28 @@
+{%extends 'default.html'%}
+{%block extra_styles%}
+<link rel="stylesheet" href="{{url_for('static', filename='css/bot.css')}}">
+{%endblock%}
+{%block form_content%}
+<p>
+    {%for i in range(10):%}
+    <form action="/enviar-prompt" method="post" >
+        <div class="form">
+            <img class="form-img" src="static/img/bot.png" alt="imagem do bot">
+            <div style="display: flex;">
+                <input class="form-input" type="text" name="prompt" placeholder="Digite sua pergunta...">
+                &NegativeThickSpace;
+                <button class="form-input-btn" type="submit">
+                    <i class="fa-solid fa-circle-arrow-up" style="width: 38px; height: 38px;"></i>
+                </button>
+            </div>
+
+            {%if resposta is not none: %}
+                <div class="form-resposta">
+                    <p>{{resposta}}</p>   
+                </div>
+            {%endif%}
+        </div>
+    </form>
+    {%endfor%}
+</p>
+{%endblock%}
