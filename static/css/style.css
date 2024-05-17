@@ -80,20 +80,25 @@ body {
   margin-right: 20px;
 }
 
+#themeBtn:hover{
+  background-color: var(--btnFontColor);
+  color: var(--btnBg);
+}
+
 .form {
   overflow:scroll;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: baseline; 
   flex-direction: column;
   position: static;
   width: 800px;
   padding: 100px 55px; 
-  padding-bottom: 300px;
-  height: 1000px;
+  height: auto;  /*!!!!!!!!!!!!!!!*/
   background-color: rgb(51, 37, 90);
   border-radius: 10px;
   margin: 45px auto; 
+  box-shadow: 3px 3px 5px rgba(51, 37, 90, 0.918);
 }
 
 footer{

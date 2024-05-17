@@ -7,15 +7,16 @@ app = Flask(__name__)
 @app.route("/index") 
 @app.route("/") 
 def index(): 
-     return render_template('index.html', resposta="null") 
+     return render_template('index.html', resposta=None, pergunta=None) 
 
 @app.route('/enviar-prompt', methods=['GET', 'POST'])
 def enviar_pergunta():
     prompt = request.form['prompt']
     print("Pergunta recebida:", prompt)
     resposta_bot = fala_com_bot(prompt_recebida=prompt)
+    #implementar logica de corrigir grammar da pergunta antes de render
 
-    return render_template('index.html', resposta=resposta_bot)
+    return render_template('index.html', resposta=resposta_bot, pergunta=prompt)
 
 @app.route("/sobre")
 def sobre():

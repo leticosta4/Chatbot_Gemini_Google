@@ -1,8 +1,8 @@
 @import url('style.css');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
   .form-img {
-    align-self: center; 
-    margin-bottom: 20px; 
+    align-self:auto; 
     position: static;
   }
   
@@ -20,36 +20,57 @@
     border: none;
     width: 35px;
     height: 35px;
-    margin-top: 12px;
+    margin-top: 12px; 
     cursor: pointer;
   }
-
-  .fa-solid, .fa-circle-arrow-up{
-    font-size: 2.35rem;
-    margin-top: -1px;
-    padding: 5%;
-    color: #bfa1e6;
-  }
   
-
   .form-input-btn i:hover{
     color: var(--green);
   }
-
-  .form-input-btn i:active{
-    color: red;
-  }
     
   .form-resposta{
+    /* overflow-y:scroll; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     position: static;
     width: 645px;
     padding: 100px 55px; 
-    height: 10000px;
+    height: auto;
     background-color: rgb(76, 56, 133);
     border-radius: 10px;
-    margin: 60px auto; 
+    margin-top: 40px;
+  }
+
+  .form-resposta-header{
+    display: flex;
+    justify-content:right;
+    width: 645px;
+    height: 60px;
+    margin-left: 50px;
+    margin-top: -55px;
+  }
+
+  .form-resposta-header i{
+    padding: 0px 10px 0px 0px;
+    width: 40px;
+    height: 20px;
+    color: #c2a6f1;
+  }
+
+  #msg-user{
+    display: flex;
+    font-size: small;
+    margin: auto;
+    margin-top: 5px;
+    margin-left: 2px;
+  }
+
+  .form-resposta-body{
+    text-align: justify;
+    margin-bottom: 70px;
+    /* background-color: #ccc2da;
+    border-radius: 25px;
+    box-shadow: 1px 1px 1px 1px black; */
   }
