@@ -4,8 +4,8 @@ from backend.chat_setup import fala_com_bot
 
 app = Flask(__name__)
 
-@app.route("/index") 
-@app.route("/") 
+@app.route('/index') 
+@app.route('/') 
 def index(): 
      return render_template('index.html', resposta=None, pergunta=None) 
 
@@ -14,10 +14,9 @@ def enviar_pergunta():
     prompt = request.form['prompt']
     print("Pergunta recebida:", prompt)
     resposta_bot = fala_com_bot(prompt_recebida=prompt)
-    #implementar logica de corrigir grammar da pergunta antes de render
 
     return render_template('index.html', resposta=resposta_bot, pergunta=prompt)
 
-@app.route("/sobre")
-def sobre():
-     return render_template("sobre.html")
+@app.route('/historico')
+def historico():
+     return render_template("historico.html")
