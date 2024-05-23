@@ -1,14 +1,14 @@
 {%extends 'default.html'%}
-{%block extra_styles%}
+{%block extra_styles%} <link rel="stylesheet" href="{{url_for('static', filename='css/bot.css')}}"> {%endblock%}
 
-<link rel="stylesheet" href="{{url_for('static', filename='css/bot.css')}}">
-{%endblock%}
+{%block title%} <title>Let Chatbot</title> {%endblock%}
+
 {%block form_content%}
 <p>
-    <form action="/enviar-prompt" method="post" >
+    <form id="chat-form" action="/enviar-prompt" method="post" >
         <div class="form">
             <img class="form-img" src="static/img/bot.png" alt="imagem do bot">
-            <div style="display: flex; align-items: c;">
+            <div style="display: flex; align-items: center;">
                 <input class="form-input" type="text" name="prompt" placeholder="Digite sua pergunta...">
                 &NegativeThickSpace;
                 <button class="form-input-btn" type="submit">
@@ -18,18 +18,22 @@
             {%if resposta is not none: %}
             <div class="form-resposta">
                 <div class="form-resposta-header">
-                    <p style="font-family: fantasy; margin-right: 10px;">
+                    <p style="font-family: fantasy; margin-right: 10px; margin-top: 8px;">
                         {{pergunta}}
                     </p>
-                    <div class="user-icon" style="position: static; align-items: center;"> <!--talve mudar ou tirar esse static depois-->
-                        <i class="fa-solid fa-user"></i>
+                    <div class="user-icon" style="position: static; align-items: center; justify-content: center;"> <!--talve mudar ou tirar esse static depois-->
+                        <img class="user-icon-img" src="static/img/user-icon.png" alt="icone do user">
                         <p id="msg-user"> você </p>
                     </div>
                 </div>
                 <div class="form-resposta-body">
-                    <p>{{resposta}}</p> 
+                    <p>{{resposta | safe}}</p> 
                     &ThickSpace;
-                    <hr style="width: 640px; color:rgb(122, 89, 212)"> 
+                    <hr id="horizontal-line"> 
+                    <h2 id="continue"> INSIRA SUA PRÓXIMA PERGUNTA </h2>
+                    <!-- <button class="history-button" onclick="window.location.href='/historico';">Acesse o seu histórico de perguntas!</button> -->
+                    <br><br><br>
+                    <a ref="{{url_for('historico')}}" class="history-button">Acesse o seu histórico de perguntas!</a>
                 </div> 
             </div>
             {%endif%}

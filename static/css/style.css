@@ -2,6 +2,8 @@
 :root { 
     --purple: #987ba3;
     --lilac: #bfa1e6;
+    --roxo-medio: #4c3885;
+    --roxo-claro: #907dc4;
     --darkGray: #5f5c5c;
     --lightGray: #686363;
     --difWhite: #f3f0d3;
@@ -98,7 +100,7 @@ body {
   background-color: rgb(51, 37, 90);
   border-radius: 10px;
   margin: 45px auto; 
-  box-shadow: 3px 3px 5px rgba(51, 37, 90, 0.918);
+  box-shadow: 8px 8px 5px rgba(51, 37, 90, 0.918);
 }
 
 footer{
@@ -108,7 +110,7 @@ footer{
   width: 100%; 
   padding: 20px; 
   text-align: center; 
-  font-size: small;
+  font-size: 16px;
   background-color: var(--footerBgColor);
   color: var(--btnColor);
 }
@@ -117,17 +119,17 @@ footer a{
   color: var(--btnColor);
 }
 
-.fa-brands{
-  font-size: 27px;
-}
-
 .dark-theme {
   --bg: var(--difBlack);
   --fontColor: var(--difWhite);
   --navBgColor: var(--lilac);
   --btnBg: var(--difWhite);
   --btnFontColor: var(--difBlack);
+  --formIntBgColor: var(--roxo-medio);
+  --formIntBoxShadow: var(6px 6px 5px rgba(77, 56, 133, 0.534));
   --footerBgColor: var(--lightGray);
+  --btnHistoricoBgColor: var(--roxo-claro);
+  --btnHistoricoColor: var(--difBlack);
 }
 
 .light-theme {
@@ -136,6 +138,10 @@ footer a{
     --navBgColor: var(--purple);
     --btnBg: var(--difBlack);
     --btnFontColor: var(--difWhite);
+    --formIntBgColor: var(--roxo-claro);
+    --formIntBoxShadow: var(6px 6px 5px hsla(256, 38%, 63%, 0.712)); /*mudar essa cor*/
     --footerBgColor: var(--darkGray);
+    --btnHistoricoBgColor: var(--roxo-medio);
+    --btnHistoricoColor: var(--difWhite);
 }
   

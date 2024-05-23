@@ -7,8 +7,3 @@ themeSwitcher.addEventListener('click', function(){
     let classes = document.body.classList; 
     var isDarkTheme = classes.contains("light-theme");
 });
-
-
-
-
-

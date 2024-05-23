@@ -12,6 +12,7 @@
     height: 35px;
     margin-top: 12px;
     text-indent: 10px;
+    border: none;
   }
   
   .form-input-btn{
@@ -27,9 +28,8 @@
   .form-input-btn i:hover{
     color: var(--green);
   }
-    
+  
   .form-resposta{
-    /* overflow-y:scroll; */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -38,9 +38,12 @@
     width: 645px;
     padding: 100px 55px; 
     height: auto;
-    background-color: rgb(76, 56, 133);
+    background-color: var(--formIntBgColor);
     border-radius: 10px;
     margin-top: 40px;
+    /* box-shadow: var(--formIntBoxShadow);  */ /*por algum motivo n ta indo*/
+    box-shadow: 6px 6px 5px rgba(77, 56, 133, 0.534);
+    padding-bottom: 11px;
   }
 
   .form-resposta-header{
@@ -51,26 +54,52 @@
     margin-left: 50px;
     margin-top: -55px;
   }
-
-  .form-resposta-header i{
-    padding: 0px 10px 0px 0px;
-    width: 40px;
-    height: 20px;
+ 
+  .user-icon-img{
+    width: 24px;
+    height: 26px;
     color: #c2a6f1;
+    margin-left: 5px;
   }
 
   #msg-user{
     display: flex;
     font-size: small;
     margin: auto;
-    margin-top: 5px;
+    margin-top: 0px;
     margin-left: 2px;
   }
 
   .form-resposta-body{
     text-align: justify;
     margin-bottom: 70px;
-    /* background-color: #ccc2da;
-    border-radius: 25px;
-    box-shadow: 1px 1px 1px 1px black; */
+  }
+
+  #horizontal-line{
+    width: 640px;
+    color:rgb(122, 89, 212)
+  }
+
+  #continue{
+    color: var(--btnBg);
+    font-family: fantasy;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.527);
+    margin-left: 154px;
+  }
+
+  .history-button{
+    background-color: var(--btnHistoricoBgColor);
+    color: var(--btnHistoricoColor);
+    margin-left: 154px;
+    padding: 10px;
+    font-family: fantasy;
+    font-size: larger;
+    border: none;
+    border-radius: 25px; 
+    margin-top: 50px;
+  }
+
+  .history-button:hover{
+    background-color: var(--btnFontColor);
+    color: var(--btnBg);
   }

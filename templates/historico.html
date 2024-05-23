@@ -1,0 +1,31 @@
+{%extends 'default.html'%}
+
+{%block extra_styles%} <link rel="stylesheet" href="{{url_for('static', filename='css/history.css')}}"> {%endblock%}
+
+{%block title%} <title>Let Chatbot - Seu histórico</title> {%endblock%}
+
+{%block form_content%}
+    <h1>SEU HISTÓRICO</h1>
+    <div class="historico">
+        {%for question, response in history%}
+        <div class="item-historico">
+            <div class="item-historico-header">
+                <p style="font-family: fantasy; margin-right: 10px; margin-top: 8px;">
+                    {{question}}
+                </p>
+                <div class="user-icon" style="position: static; align-items: center; justify-content: center;"> <!--talve mudar ou tirar esse static depois-->
+                    <img class="user-icon-img" src="static/img/user-icon.png" alt="icone do user">
+                    <p id="msg-user"> você </p>
+                </div>
+            </div>
+            <div class="item-historico-body">
+                <p>{{response | safe}}</p> 
+            </div> 
+        </div>
+        <br>
+        {%endfor%}
+        <br><br>
+    </div>
+    <a href="{{url_for('historico')}}" id="back-to-top">De volta ao topo</a>
+    <br><br><br><br>
+{%endblock%}

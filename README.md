@@ -1,10 +1,11 @@
 # Chatbot_Gemini_Google
 Programa de Chatbot simples com uso da API do Google Gemini AI, usando o modelo '`gemini-1.0-pro`', que trabalha somente com entrada de texto e é a última versão estável publicada.
 
-### Bibliotecas e módulos utilizados
+### Principais bibliotecas e módulos utilizados
 - [google.generativeai](https://ai.google.dev/gemini-api/docs/get-started/python#setup)  para uso da API do Gemini
-- [IPython](https://ipython.readthedocs.io/en/stable/)
-- [textwrap](https://docs.python.org/3/library/textwrap.html)
+- [re](https://docs.python.org/3/library/re.html)
+<!-- - [IPython](https://ipython.readthedocs.io/en/stable/)
+- [textwrap](https://docs.python.org/3/library/textwrap.html) -->
 
 
 ### Criação de um ambiente virtual

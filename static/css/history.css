@@ -1,0 +1,76 @@
+h1{
+    font-family: fantasy;
+    margin-top: 90px;
+    font-size: 50px;
+    text-align: center;
+    margin-left: 63px;
+    position: static;
+}
+
+.historico{
+    overflow:scroll;
+    align-items: center;
+    margin-left: 541px;
+    align-items: center;
+    position: static;
+    margin-top: 50px;
+    height: auto;
+    width: auto;
+    position: static;
+}
+
+.item-historico{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: static;
+    width: 645px;
+    padding: 100px 55px; 
+    height: auto;
+    background-color: var(--formIntBgColor);
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 6px 6px 5px rgba(77, 56, 133, 0.534);
+    padding-bottom: 11px;
+  }
+
+  .item-historico-header{
+    display: flex;
+    justify-content:right;
+    width: 645px;
+    height: 60px;
+    margin-left: 50px;
+    margin-top: -55px;
+  }
+ 
+  .user-icon-img{
+    width: 24px;
+    height: 26px;
+    color: #c2a6f1;
+    margin-left: 5px;
+  }
+
+  #msg-user{
+    display: flex;
+    font-size: small;
+    margin: auto;
+    margin-top: 0px;
+    margin-left: 2px;
+  }
+
+  .item-historico-body{
+    text-align: justify;
+    margin-bottom: 70px;
+  }
+
+  #back-to-top{
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--btnBg);
+    margin-left: 852px;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.527);
+    font-size: large;
+    /* font family dps */
+  }
