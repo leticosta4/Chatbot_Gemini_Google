@@ -1,6 +1,4 @@
-import textwrap 
 from backend.model import model
-from IPython.display import Markdown
 import re
 
 chat = model.start_chat(history=[])
@@ -30,19 +28,3 @@ def fala_com_bot(prompt_recebida):
 
 def mostra_historico():
    return zip(perguntas, respostas_html)
-
-# def mostra_historico():
-#   respostas_chat = []
-#   perguntas_user = []
-#   for parte in chat.history:
-#       papel = parte.role
-#       texto = parte.parts
-
-#       if papel == "user":
-#         perguntas_user.append(texto)
-#       elif papel == "model": 
-#         respostas_chat.append(texto)
-
-#   for q, a in zip(perguntas_user, respostas_chat):
-#     print(f"pergunta: {q}")
-#     print(f" {texto}\n")

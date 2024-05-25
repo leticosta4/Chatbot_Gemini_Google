@@ -4,7 +4,7 @@
     --lilac: #bfa1e6;
     --roxo-medio: #4c3885;
     --roxo-claro: #907dc4;
-    --darkGray: #5f5c5c;
+    --darkGray: #777474;
     --lightGray: #686363;
     --difWhite: #f3f0d3;
     --difBlack: #000000;
@@ -103,6 +103,13 @@ body {
   box-shadow: 8px 8px 5px rgba(51, 37, 90, 0.918);
 }
 
+#pergunta {
+  font-family: fantasy;
+  margin-right: 10px;
+  margin-top: 5px;
+  font-size: 21px;
+}
+
 footer{
   position: fixed; 
   bottom: 0; 
@@ -110,9 +117,16 @@ footer{
   width: 100%; 
   padding: 20px; 
   text-align: center; 
-  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   background-color: var(--footerBgColor);
   color: var(--btnColor);
+}
+
+footer span{ /*NAO TIRA ESSE ESTILO AQUI PLMDS*/
+  line-height: 13px;
+    vertical-align: text-top;
+    font-size: 17px;
 }
 
 footer a{

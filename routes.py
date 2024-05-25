@@ -9,7 +9,6 @@ app = Flask(__name__)
 def index(): 
      return render_template('index.html', resposta=None, pergunta=None) 
 
-#ta dando problema aqui
 @app.route('/historico', methods=['GET'])
 def historico():
      historico = mostra_historico()

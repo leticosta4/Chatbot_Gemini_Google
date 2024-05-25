@@ -3,8 +3,9 @@ h1{
     margin-top: 90px;
     font-size: 50px;
     text-align: center;
-    margin-left: 63px;
+    margin-left: 56px;
     position: static;
+    text-shadow: 4px 4px 7px rgba(245, 236, 236, 0.582);
 }
 
 .historico{
@@ -62,6 +63,7 @@ h1{
   .item-historico-body{
     text-align: justify;
     margin-bottom: 70px;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   #back-to-top{
@@ -69,8 +71,8 @@ h1{
     text-align: center;
     margin-bottom: 20px;
     color: var(--btnBg);
-    margin-left: 852px;
+    margin-left: 850px;
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.527);
     font-size: large;
-    /* font family dps */
+    font-family: Arial, Helvetica, sans-serif;
   }

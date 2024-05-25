@@ -17,12 +17,12 @@
 <body class="dark-theme">
     <header>
         <nav class="navbar">
-            <a id="navbar-title" href="{{url_for('index')}}" >
+            <a id="navbar-title" href="{{url_for('index')}}" target="_self">
                 <img src="{{url_for('static', filename='img/favicon.svg')}}" alt="favicon do site">
                 Let Chatbot 
             </a>
             <ul class="navbar-lista">
-                <li> <a href="{{url_for('historico')}}">Histórico</a> </li>
+                <li> <a href="{{url_for('historico')}}" target="_blank" style="text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.568);">Histórico</a> </li>
                 <button id="themeBtn" class="btn" type="submit">Mudar tema</button>
             </ul>
         </nav>
@@ -31,13 +31,11 @@
         {%block form_content%}
         {%endblock%}
         <footer>
-            &copy; By Letícia Almeida 2024
-            &middot;
-            <a href="https://www.linkedin.com/in/let%C3%ADcia-almeida-9704162a0/" target="_blank"><i class="fa-brands fa-linkedin" style="font-size: 27px; :hover::before{content: attr(title);}" title="Perfil no linkedIn"></i></a>
-            &middot;
-            <a href="https://github.com/leticosta4" target="_blank"><i class="fa-brands fa-github" style="font-size: 27px; :hover::before{content: attr(title);}" title="Perfil no GitHub"></i></a>
-            &middot;
-            <a href="https://github.com/leticosta4/Chatbot_Gemini_Google" target="_blank"><i id="file-code-icon" class="fa-solid fa-file-code" style="font-size: 27px; :hover::before{content: attr(title);}" title="Repósitorio com o código fonte"></i></a>
+            <span>&copy; By Letícia Almeida 2024</span> <!--NAO TIRA DESSA TAG-->
+                &middot;
+                <a href="https://www.linkedin.com/in/let%C3%ADcia-almeida-9704162a0/" target="_blank"><i class="fa-brands fa-linkedin" style="font-size: 25px;:hover::before{content: attr(title);}" title="Perfil no linkedIn"></i></a>
+                &middot;
+                <a href="https://github.com/leticosta4" target="_blank"><i class="fa-brands fa-github" style="font-size: 25px; :hover::before{content: attr(title);}" title="Perfil no GitHub"></i></a>       
         </footer>
     </main>
       <script src="static/actions.js"></script>

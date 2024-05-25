@@ -9,7 +9,7 @@
         <div class="form">
             <img class="form-img" src="static/img/bot.png" alt="imagem do bot">
             <div style="display: flex; align-items: center;">
-                <input class="form-input" type="text" name="prompt" placeholder="Digite sua pergunta...">
+                <textarea class="form-input" name="prompt" id="prompt" placeholder="Digite sua pergunta..." rows="1"></textarea> <!--deixar esse textarea mesmo em vez de input-->
                 &NegativeThickSpace;
                 <button class="form-input-btn" type="submit">
                     <i class="fa-solid fa-circle-arrow-up" style="width: 38px; height: 38px; font-size: 2.35rem; margin-top: -1px; padding: 5%; color: #bfa1e6;"></i>
@@ -18,10 +18,10 @@
             {%if resposta is not none: %}
             <div class="form-resposta">
                 <div class="form-resposta-header">
-                    <p style="font-family: fantasy; margin-right: 10px; margin-top: 8px;">
+                    <p id="pergunta">    
                         {{pergunta}}
                     </p>
-                    <div class="user-icon" style="position: static; align-items: center; justify-content: center;"> <!--talve mudar ou tirar esse static depois-->
+                    <div class="user-icon" style="position: static; align-items: center; justify-content: center;"> 
                         <img class="user-icon-img" src="static/img/user-icon.png" alt="icone do user">
                         <p id="msg-user"> você </p>
                     </div>
@@ -29,11 +29,12 @@
                 <div class="form-resposta-body">
                     <p>{{resposta | safe}}</p> 
                     &ThickSpace;
-                    <hr id="horizontal-line"> 
-                    <h2 id="continue"> INSIRA SUA PRÓXIMA PERGUNTA </h2>
-                    <!-- <button class="history-button" onclick="window.location.href='/historico';">Acesse o seu histórico de perguntas!</button> -->
-                    <br><br><br>
-                    <a ref="{{url_for('historico')}}" class="history-button">Acesse o seu histórico de perguntas!</a>
+                    <hr id="horizontal-line"><br>
+                    <a href="#" style="text-decoration: none;" target="_top">
+                        <h2 id="continue"> 
+                            INSIRA SUA PRÓXIMA PERGUNTA
+                        </h2></a><br><br>
+                    <a href="{{url_for('historico')}}" target="_blank" class="history-button">Acesse o seu histórico de perguntas!</a>
                 </div> 
             </div>
             {%endif%}
